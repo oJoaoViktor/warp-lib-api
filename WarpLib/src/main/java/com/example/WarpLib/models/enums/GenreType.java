@@ -1,4 +1,4 @@
-package com.example.WarpLib.models;
+package com.example.WarpLib.models.enums;
 
 public enum GenreType {
     ACTION, 

@@ -1,5 +1,7 @@
 package com.example.WarpLib.models;
 
+import com.example.WarpLib.models.enums.MediaCategory;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

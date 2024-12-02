@@ -2,6 +2,8 @@ package com.example.WarpLib.models;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.example.WarpLib.models.enums.GenreType;
+
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -41,7 +43,7 @@ public abstract class Product {
 
     @NotNull(message="O ano de lançamento não pode ser nulo.")
     @Min(value=1800, message = "O ano de lançamento deve ser acima de 1800.")
-    private int release_year;
+    private int releaseYear;
     
     @NotNull(message="A faixa etária não pode ser nula.")
     @Min(value=0, message = "A faixa etária não pode ser menor que 0.")
@@ -52,7 +54,7 @@ public abstract class Product {
 
     @Min(value=0, message = "A quantidade de prêmios não pode ser menor que 0.")
     private int awards;
-
+    
     @Min(value=0, message="A avaliação não pode ser menor que 0.")
     @Max(value=5, message="A avaliação não pode ser maior que 5.")
     private Float rating;
@@ -62,7 +64,7 @@ public abstract class Product {
 
     @NotNull(message="A quantidade disponível não pode ser nula.")
     @Min(value=0, message="A quantidade disponível não pode ser menor que 0.")
-    private int available_quantity;
+    private int availableQuantity;
 
     @ElementCollection(targetClass = GenreType.class)
     @Enumerated(EnumType.STRING)
