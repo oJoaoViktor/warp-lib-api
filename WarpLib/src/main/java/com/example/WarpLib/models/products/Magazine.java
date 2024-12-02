@@ -1,4 +1,7 @@
-package com.example.WarpLib.models;
+package com.example.WarpLib.models.products;
+
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Min;
@@ -12,18 +15,19 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Book extends Product{
+public class Magazine extends Product {
 
-    @NotNull(message = "O ISBN não pode ser nulo.")
-    @Size(min=10, max=13, message = "O ISBN deve ter entre 10 e 13 caracteres.")
-    private String isbn;
-    
     @NotNull(message="A quantidade de páginas não pode ser nula.")
     @Min(value=1, message="A quantidade de páginas deve ser maior que 0.")
     @Column(name="page_count")
     private int pageCount;
 
-    @NotNull(message="A editora não pode ser nula.")
-    @Size(min=1, max=100, message="A editora deve conter entre 1 e 100 caracteres.")
-    private String publisher;
+    @NotNull(message="A data de publicação não pode ser nula.")
+    @Column(name="publication_date")
+    private LocalDate publicationDate;
+
+    @NotNull(message="O volume/edição não pode ser nulo.")
+    @Size(min=1, max=50, message="O volume/edição deve conter entre 1 e 50 caracteres.")
+    @Column(name="volume_edition")
+    private String volumeEdition;
 }

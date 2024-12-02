@@ -1,8 +1,8 @@
-package com.example.WarpLib.models;
+package com.example.WarpLib.models.products;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.WarpLib.models.enums.GenreType;
+import com.example.WarpLib.models.enums.products.GenreType;
 
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.EnumType;

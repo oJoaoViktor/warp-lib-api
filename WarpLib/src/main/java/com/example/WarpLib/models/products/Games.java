@@ -1,7 +1,7 @@
-package com.example.WarpLib.models;
+package com.example.WarpLib.models.products;
 
-import com.example.WarpLib.models.enums.GameCategory;
-import com.example.WarpLib.models.enums.GameMechanic;
+import com.example.WarpLib.models.enums.products.GameCategory;
+import com.example.WarpLib.models.enums.products.GameMechanic;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
