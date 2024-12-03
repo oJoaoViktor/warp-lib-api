@@ -2,6 +2,8 @@ package com.example.WarpLib.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.lang.reflect.Field;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -28,7 +30,8 @@ public abstract class GenericProductService<T> {
 
     public Optional<T> update(Long id, T updatedEntity){
         return repository.findById(id).map(existingEntity -> {
-            return repository.save(updatedEntity);
+            copyFields(updatedEntity, existingEntity);
+            return repository.save(existingEntity);
         });
     }
 
@@ -39,4 +42,31 @@ public abstract class GenericProductService<T> {
         }
         return false;
     }
+
+private void copyFields(T source, T target) {
+    Class<?> clazz = source.getClass();
+
+    // Itera por todos os campos da classe
+    while (clazz != null) { // Inclui campos de superclasses
+        for (Field field : clazz.getDeclaredFields()) {
+            field.setAccessible(true); // Permite acessar campos privados
+            try {
+                // Ignorar o campo "id" (ou qualquer outro que não deve ser copiado)
+                if (field.getName().equalsIgnoreCase("id")) {
+                    continue;
+                }
+
+                // Copiar o valor do campo de `source` para `target`
+                Object value = field.get(source);
+                field.set(target, value);
+            } catch (IllegalAccessException e) {
+                // Tratar exceções de acesso aos campos
+                throw new RuntimeException("Erro ao copiar o campo: " + field.getName(), e);
+            }
+        }
+        clazz = clazz.getSuperclass(); // Move para a superclasse
+    }
 }
+
+}
+

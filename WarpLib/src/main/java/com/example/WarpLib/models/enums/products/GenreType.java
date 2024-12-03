@@ -19,5 +19,7 @@ public enum GenreType {
     CRIME, 
     FAMILY, 
     BIOGRAPHY, 
-    SPORTS
+    SPORTS,
+    DYSTOPIAN,
+    POLITICAL_FICTION
 }

@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Games extends Product{
+public class Game extends Product{
 
     @Enumerated(EnumType.STRING)
     @NotNull(message="A categoria não pode ser nula.")

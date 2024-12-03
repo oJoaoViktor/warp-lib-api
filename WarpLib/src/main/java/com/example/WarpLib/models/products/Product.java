@@ -15,6 +15,7 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -63,11 +64,10 @@ public abstract class Product {
     private String language;
 
     @NotNull(message="A quantidade disponível não pode ser nula.")
-    @Min(value=0, message="A quantidade disponível não pode ser menor que 0.")
+    @PositiveOrZero(message="A quantidade disponível não pode ser menor que 0.")
     private int availableQuantity;
 
     @ElementCollection(targetClass = GenreType.class)
     @Enumerated(EnumType.STRING)
-    @Size(min=3, max=100, message="O gênero deve conter entre 3 e 100 caracteres.")
     private Set<GenreType> genres = new HashSet<>();
 }
