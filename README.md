@@ -1,7 +1,7 @@
 # WarpLib 🛰️
-![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.0-brightgreen)
+![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.2.0--alpha-yellowgreen)
 ![Static Badge](https://img.shields.io/badge/%F0%9F%93%88_Status-In_Development-yellow)
-![Last Update](https://img.shields.io/badge/Readme-04/12/2024-brightgreen)
+![Last Update](https://img.shields.io/badge/Readme-06/12/2024-brightgreen)
 
 ## 📃 Descrição
 WarpLib é uma aplicação inovadora para o gerenciamento de uma biblioteca virtual que vai além dos livros digitais. Com ela, é possível catalogar e acessar tanto mídias físicas modernas, como CDs e DVDs, quanto itens vintage, como fitas cassete, vinil e outros formatos antigos. Utilizando tecnologias modernas, o WarpLib facilita a administração e o acesso ao acervo, criando uma ponte entre o passado e o presente no universo das bibliotecas.
@@ -37,5 +37,8 @@ O projeto está sendo desenvolvido com foco na modularidade e reusabilidade, per
 ## ⚙️ Como executar o projeto
 Siga os passos no documento ["Como executar o projeto"](docs/how_to_execute.md).
 
+## 📝 Changelog
+Veja todas as mudanças relevantes do projeto no documento ["Changelog"](docs/CHANGELOG.md).
+
 ## ✒️ Autor
-- João Viktor Trindade - _Desenvolvedor Backend_ - ["Perfil do GitHub"](https://github.com/oJoaoViktor)
+João Viktor Trindade - _Desenvolvedor Backend_ - ["Perfil do GitHub"](https://github.com/oJoaoViktor)

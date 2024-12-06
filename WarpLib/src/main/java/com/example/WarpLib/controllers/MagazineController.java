@@ -7,7 +7,7 @@ import com.example.WarpLib.models.products.Magazine;
 import com.example.WarpLib.services.MagazineService;
 
 @RestController
-@RequestMapping("/api/magazine")
+@RequestMapping("v1/api/magazine")
 public class MagazineController extends GenericProductController<Magazine>{
     public MagazineController(MagazineService magazineService){
         super(magazineService);

@@ -7,7 +7,7 @@ import com.example.WarpLib.models.products.Game;
 import com.example.WarpLib.services.GameService;
 
 @RestController
-@RequestMapping("/api/games")
+@RequestMapping("v1/api/games")
 public class GameController extends GenericProductController<Game>{
     public GameController(GameService gameService){
         super(gameService);

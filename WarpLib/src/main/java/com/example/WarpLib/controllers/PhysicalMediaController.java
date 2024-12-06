@@ -7,7 +7,7 @@ import com.example.WarpLib.models.products.PhysicalMedia;
 import com.example.WarpLib.services.PhysicalMediaService;
 
 @RestController
-@RequestMapping("/api/physical-media")
+@RequestMapping("v1/api/physical-media")
 public class PhysicalMediaController extends GenericProductController<PhysicalMedia>{
     public PhysicalMediaController(PhysicalMediaService physicalMediaService){
         super(physicalMediaService);
