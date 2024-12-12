@@ -8,7 +8,7 @@ public class EnvConfig {
 
     static {
         dotenv = Dotenv.configure()
-                       .directory("WarpLib")
+                       .filename(".env")
                        .load();
     }
 

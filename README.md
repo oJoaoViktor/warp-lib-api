@@ -1,5 +1,5 @@
 # WarpLib 🛰️
-![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.2.0--alpha-yellowgreen)
+![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.2.1--alpha-yellowgreen)
 ![Static Badge](https://img.shields.io/badge/%F0%9F%93%88_Status-In_Development-yellow)
 ![Last Update](https://img.shields.io/badge/Readme-06/12/2024-brightgreen)
 
