@@ -19,16 +19,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Game extends Product{
 
+    @Column(nullable=false)
     @Enumerated(EnumType.STRING)
-    @NotNull(message="A categoria não pode ser nula.")
+    @NotNull(message="A categoria é obrigatória.")
     private GameCategory category;
     
+    @Column(nullable=false)
     @Enumerated(EnumType.STRING)
-    @NotNull(message="A mecânica não pode ser nula.")
+    @NotNull(message="A mecânica de jogo é obrigatória.")
     private GameMechanic mechanic;
 
-    @Positive(message="O tempo de jogo deve ser maior que 0 minutos.")
     @Column(name="estimated_play_time")
+    @Positive(message="O tempo de jogo deve ser maior que 0 minutos.")
     private int estimatedPlayTime;
 
 }

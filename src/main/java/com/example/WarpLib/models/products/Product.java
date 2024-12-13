@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.example.WarpLib.models.enums.products.GenreType;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -30,30 +31,35 @@ public abstract class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotNull(message = "O preço não pode ser nulo.")
+    @Column(nullable=false)
+    @NotNull(message = "O preço é obrigatório.")
     @Positive(message = "O preço deve ser positivo.")
     private float price;
 
-    @NotNull(message = "O título não pode ser nulo.")
+    @Column(nullable=false)
+    @NotNull(message = "O título é obrigatório.")
     @Size(min=1, max=255, message = "O título deve conter entre 1 e 255 caracteres.")
     private String title;
 
-    @NotNull(message = "A autoria não pode ser nula.")
+    @Column(nullable=false)
+    @NotNull(message = "A autoria é obrigatória.")
     @Size(min=1, max=255, message = "A autoria deve conter entre 1 e 255 caracteres.")
     private String authorship;
 
-    @NotNull(message="O ano de lançamento não pode ser nulo.")
+    @Column(nullable=false)
     @Min(value=1800, message = "O ano de lançamento deve ser acima de 1800.")
+    @NotNull(message="O ano de lançamento é obrigatório.")
     private int releaseYear;
     
-    @NotNull(message="A faixa etária não pode ser nula.")
+    @Column(nullable=false)
     @Min(value=0, message = "A faixa etária não pode ser menor que 0.")
+    @NotNull(message="A faixa etária é obrigatória.")
     private int age;
 
-    @Min(value=1, message = "A quantidade de cópias não pode ser menor que 0.")
+    @PositiveOrZero(message = "A quantidade de cópias não pode ser menor que 0.")
     private int copies;
 
-    @Min(value=0, message = "A quantidade de prêmios não pode ser menor que 0.")
+    @PositiveOrZero(message = "A quantidade de prêmios não pode ser menor que 0.")
     private int awards;
     
     @Min(value=0, message="A avaliação não pode ser menor que 0.")
@@ -63,7 +69,7 @@ public abstract class Product {
     @Size(min=4, max=20, message="O idioma deve conter entre 4 e 20 caracteres.")
     private String language;
 
-    @NotNull(message="A quantidade disponível não pode ser nula.")
+    @NotNull(message="A quantidade disponível é obrigatória.")
     @PositiveOrZero(message="A quantidade disponível não pode ser menor que 0.")
     private int availableQuantity;
 

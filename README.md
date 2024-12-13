@@ -1,7 +1,7 @@
 # WarpLib 🛰️
-![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.2.1--alpha-yellowgreen)
+![Static Badge](https://img.shields.io/badge/%F0%9F%93%A6Version-1.3.0--alpha-yellowgreen)
 ![Static Badge](https://img.shields.io/badge/%F0%9F%93%88_Status-In_Development-yellow)
-![Last Update](https://img.shields.io/badge/Readme-06/12/2024-brightgreen)
+![Last Update](https://img.shields.io/badge/Readme-13/12/2024-brightgreen)
 
 ## 📃 Descrição
 WarpLib é uma aplicação inovadora para o gerenciamento de uma biblioteca virtual que vai além dos livros digitais. Com ela, é possível catalogar e acessar tanto mídias físicas modernas, como CDs e DVDs, quanto itens vintage, como fitas cassete, vinil e outros formatos antigos. Utilizando tecnologias modernas, o WarpLib facilita a administração e o acesso ao acervo, criando uma ponte entre o passado e o presente no universo das bibliotecas.
