@@ -34,7 +34,11 @@ public abstract class Product {
     @Column(nullable=false)
     @NotNull(message = "O preço é obrigatório.")
     @Positive(message = "O preço deve ser positivo.")
-    private float price;
+    private double price;
+
+    @Column(name="rental_price", nullable=false)
+    @Positive(message="O preço deve ser positivo.")
+    private double rentalPrice;
 
     @Column(nullable=false)
     @NotNull(message = "O título é obrigatório.")
@@ -64,7 +68,7 @@ public abstract class Product {
     
     @Min(value=0, message="A avaliação não pode ser menor que 0.")
     @Max(value=5, message="A avaliação não pode ser maior que 5.")
-    private Float rating;
+    private double rating;
 
     @Size(min=4, max=20, message="O idioma deve conter entre 4 e 20 caracteres.")
     private String language;
@@ -76,4 +80,5 @@ public abstract class Product {
     @ElementCollection(targetClass = GenreType.class)
     @Enumerated(EnumType.STRING)
     private Set<GenreType> genres = new HashSet<>();
+
 }
