@@ -1,4 +1,4 @@
-package com.example.WarpLib.controllers;
+package com.example.WarpLib.controllers.products;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.example.WarpLib.services.GenericProductService;
+import com.example.WarpLib.services.products.GenericProductService;
 
 import jakarta.validation.Valid;
 

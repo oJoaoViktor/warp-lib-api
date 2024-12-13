@@ -1,9 +1,9 @@
-package com.example.WarpLib.services;
+package com.example.WarpLib.services.products;
 
 import org.springframework.stereotype.Service;
 
 import com.example.WarpLib.models.products.PhysicalMedia;
-import com.example.WarpLib.repositories.PhysicalMediaRepository;
+import com.example.WarpLib.repositories.products.PhysicalMediaRepository;
 
 @Service
 public class PhysicalMediaService extends GenericProductService<PhysicalMedia> {

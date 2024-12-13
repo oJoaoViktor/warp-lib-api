@@ -1,4 +1,4 @@
-package com.example.WarpLib.services;
+package com.example.WarpLib.services.products;
 
 import java.util.List;
 import java.util.Optional;

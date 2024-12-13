@@ -1,4 +1,4 @@
-package com.example.WarpLib.repositories;
+package com.example.WarpLib.repositories.products;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
